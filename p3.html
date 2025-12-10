@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>স্বাগতম - আপনার প্রোফাইল</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e9ecef;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #007bff;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #007bff;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .section-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-box {
+            width: 200px;
+            height: 150px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .section-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-box a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        
+        /* Box Specific Colors */
+        #intro-box { background-color: #ff6347; /* Tomato */ }
+        #like-box { background-color: #3cb371; /* MediumSeaGreen */ }
+        #dislike-box { background-color: #4682b4; /* SteelBlue */ }
+        #ononnya-box { background-color: #ff8c00; /* DarkOrange */ }
+        #gallery-box { background-color: #8a2be2; /* BlueViolet */ }
+
+    </style>
+</head>
+<body>
+
+    
+
+<h1>ড্যাশবোর্ড</h1>
+
+    <div class="section-grid">
+        
+        <div class="section-box" id="intro-box">
+            <a href="porichiti.html">পরিচিতি</a>
+        </div>
+
+        <div class="section-box" id="like-box">
+            <a href="bhalolaga.html">ভালোলাগা</a>
+        </div>
+
+        <div class="section-box" id="dislike-box">
+            <a href="kharaplaga.html">খারাপলাগা</a>
+        </div>
+
+        <div class="section-box" id="ononnya-box">
+            <a href="ononna.html">গ্যালারি</a>
+        </div>
+
+        <div class="section-box" id="gallery-box">
+            <a href="gallery.html">অনন্যা</a>
+        </div>
+    </div>
+
+</body>
+</html>
