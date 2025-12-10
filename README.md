@@ -51,7 +51,8 @@
             box-sizing: border-box;
         }
 
-        input[type="submit"] {
+        /* Login Button Style */
+        #loginBtn { 
             width: 100%;
             padding: 10px;
             background-color: #5cb85c;
@@ -64,7 +65,7 @@
             transition: background-color 0.3s;
         }
 
-        input[type="submit"]:hover {
+        #loginBtn:hover {
             background-color: #4cae4c;
         }
 
@@ -82,7 +83,8 @@
 </head>
 <body>
     <div class="login-container">
-        <form action="#" onsubmit="return validateLogin()">
+        
+        <form action="#"> 
             <h2>Login</h2>
             
             <div class="input-group">
@@ -95,31 +97,45 @@
                 <input type="password" id="password" name="password" placeholder="Enter your password" required>
             </div>
 
-            <input type="submit" value="Submit">
+            <button type="button" id="loginBtn">Submit</button>
         </form>
 
         <div class="forgot-password">
-            <a href="forgot.html">Forgot Password?</a>
+            <a href="#" id="forgotLink">Forgot Password?</a>
         </div>
     </div>
     
     <script>
-        function validateLogin() {
-            const correctUsername = "tanvir";
-            const correctPassword = "1234";
+        // Get HTML elements by ID
+        const loginButton = document.getElementById('loginBtn');
+        const forgotPasswordLink = document.getElementById('forgotLink');
+
+        // 1. Forgot Password link functionality
+        forgotPasswordLink.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            // The English message:
+            alert("চিন্তা করবেন না! দয়া করে এডমিনের সাথে যোগাযোগ করুন:- ০১৭৭৫৬৪৫৩১৩"); 
+        });
+
+        // 2. Login button functionality and validation
+        loginButton.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            
+            // Login Validation 
+            const correctUsername = "tanvir"; 
+            const correctPassword = "1234";  
 
             const inputUsername = document.getElementById('username').value;
             const inputPassword = document.getElementById('password').value;
 
             if (inputUsername === correctUsername && inputPassword === correctPassword) {
-                alert("Login successful! Going to the welcome page.");
-                window.location.href = "welcome.html?username=" + inputUsername; 
-                return false;
+                // Redirect to welcome.html on success
+                window.location.href = 'welcome.html';
             } else {
+                // Show error message on failure
                 alert("Invalid Username or Password. Please try again.");
-                return false;
             }
-        }
+        });
     </script>
 </body>
 </html>
